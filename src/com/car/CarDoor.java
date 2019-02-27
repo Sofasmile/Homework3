@@ -30,4 +30,29 @@ public class CarDoor {
         return windowСondition;
     }
 
+    public void openDoor() {
+        setDoorCondition(true);
+    }
+
+    public void closeDoor() {
+        setDoorCondition(false);
+    }
+
+    public void openWindow() {
+        setWindowСondition(true);
+
+    }
+
+    public void closeWindow() {
+        setWindowСondition(false);
+
+    }
+
+    public void openCloseDoor() {
+        setDoorCondition(getDoorCondition() == true ? false : true);
+    }
+
+    public void openCloseWindow() {
+        setWindowСondition(getWindowСondition() == true ? false : true);
+    }
 }
