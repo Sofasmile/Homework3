@@ -10,8 +10,8 @@ public class CarDoor {
     }
 
     public CarDoor(boolean doorCondition, boolean windowСondition) {
-        setDoorCondition(doorCondition);
-        setDoorCondition(windowСondition);
+        this.doorCondition = doorCondition;
+        this.windowСondition = windowСondition;
     }
 
     public void setDoorCondition(boolean doorCondition) {
@@ -40,12 +40,10 @@ public class CarDoor {
 
     public void openWindow() {
         setWindowСondition(true);
-
     }
 
     public void closeWindow() {
         setWindowСondition(false);
-
     }
 
     public void openCloseDoor() {
@@ -59,7 +57,7 @@ public class CarDoor {
     public void show() {
         String stateOfDoor = (getDoorCondition() == true ? "open" : "close");
         String stateOfWindow = (getWindowСondition() == true ? "open" : "close");
-        System.out.println("The door is " + stateOfDoor
-                + "The window is " + stateOfWindow);
+        System.out.println("    The door is " + stateOfDoor
+                + ". The window is " + stateOfWindow);
     }
 }
