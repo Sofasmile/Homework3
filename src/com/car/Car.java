@@ -3,7 +3,7 @@ package car;
 import java.util.Date;
 
 public class Car {
-    private Date makeDate;
+    private final Date makeDate;
     private String typeEngine;
     private int maxSpeed;
     private double runUpTime;
