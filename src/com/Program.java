@@ -3,6 +3,7 @@ import car.CarDoor;
 import car.CarWheel;
 
 import javax.swing.text.html.CSS;
+import java.util.Date;
 
 public class Program {
     public static void main(String[] args) {
@@ -40,7 +41,7 @@ public class Program {
         System.out.println("-----------------------");
 
         //Car
-        Car car = new Car("12.12.2012", "TP-123", 260, 2.5, 6, 2, 100);
+        Car car = new Car(new Date(), "TP-123", 260, 2.5, 6, 2, 100);
         System.out.println(">>Before changing: ");
         car.show();
 

@@ -1,33 +1,31 @@
 package car;
 
 public class CarDoor {
-    private boolean doorCondition;
-    private boolean windowСondition;
+    private boolean isDoorOpened;
+    private boolean isWindowOpened;
 
     public CarDoor() {
-        this.doorCondition = false;
-        this.windowСondition = false;
     }
 
     public CarDoor(boolean doorCondition, boolean windowСondition) {
-        this.doorCondition = doorCondition;
-        this.windowСondition = windowСondition;
+        this.isDoorOpened = doorCondition;
+        this.isWindowOpened = windowСondition;
     }
 
     public void setDoorCondition(boolean doorCondition) {
-        this.doorCondition = doorCondition;
+        this.isDoorOpened = doorCondition;
     }
 
     public void setWindowСondition(boolean windowСondition) {
-        this.windowСondition = windowСondition;
+        this.isWindowOpened = windowСondition;
     }
 
     public boolean getDoorCondition() {
-        return doorCondition;
+        return isDoorOpened;
     }
 
     public boolean getWindowСondition() {
-        return windowСondition;
+        return isWindowOpened;
     }
 
     public void openDoor() {

@@ -1,7 +1,9 @@
 package car;
 
+import java.util.Date;
+
 public class Car {
-    private final String date;
+    private Date makeDate;
     private String typeEngine;
     private int maxSpeed;
     private double runUpTime;
@@ -15,14 +17,14 @@ public class Car {
     private CarWheel[] carWheels = new CarWheel[MAX_NUMBER_WHEEL];
 
 
-    public Car(String date) {
-        this.date = date;
+    public Car(Date makeDate) {
+        this.makeDate = makeDate;
         setCarDoor();
         setCarWheels();
     }
 
-    public Car(String date, String typeEngine, int maxSpeed, double runUpTime, int maxCountPassenger, int passengerNow, int speedNow) {
-        this.date = date;
+    public Car(Date makeDate, String typeEngine, int maxSpeed, double runUpTime, int maxCountPassenger, int passengerNow, int speedNow) {
+        this.makeDate = makeDate;
         this.typeEngine = typeEngine;
         this.maxSpeed = maxSpeed;
         this.runUpTime = runUpTime;
@@ -66,8 +68,8 @@ public class Car {
         }
     }
 
-    public String getDate() {
-        return date;
+    public Date getDate() {
+        return makeDate;
     }
 
     public void setTypeEngine(String typeEngine) {
