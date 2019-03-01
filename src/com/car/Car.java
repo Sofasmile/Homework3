@@ -184,6 +184,7 @@ public class Car {
         for (CarWheel wheel : carWheels) {
             wheel = null;
         }
+        speedNow = 0;
         countWheel = 0;
     }
 
