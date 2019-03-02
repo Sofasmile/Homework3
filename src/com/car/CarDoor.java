@@ -1,33 +1,61 @@
 package car;
 
 public class CarDoor {
-    private boolean doorCondition;
-    private boolean windowСondition;
+    private boolean isDoorOpened;
+    private boolean isWindowOpened;
 
     public CarDoor() {
-        setDoorCondition(false);
-        setWindowСondition(false);
     }
 
     public CarDoor(boolean doorCondition, boolean windowСondition) {
-        setDoorCondition(doorCondition);
-        setDoorCondition(windowСondition);
+        this.isDoorOpened = doorCondition;
+        this.isWindowOpened = windowСondition;
     }
 
     public void setDoorCondition(boolean doorCondition) {
-        this.doorCondition = doorCondition;
+        this.isDoorOpened = doorCondition;
     }
 
     public void setWindowСondition(boolean windowСondition) {
-        this.windowСondition = windowСondition;
+        this.isWindowOpened = windowСondition;
     }
 
     public boolean getDoorCondition() {
-        return doorCondition;
+        return isDoorOpened;
     }
 
     public boolean getWindowСondition() {
-        return windowСondition;
+        return isWindowOpened;
     }
 
+    public void openDoor() {
+        setDoorCondition(true);
+    }
+
+    public void closeDoor() {
+        setDoorCondition(false);
+    }
+
+    public void openWindow() {
+        setWindowСondition(true);
+    }
+
+    public void closeWindow() {
+        setWindowСondition(false);
+    }
+
+    public void openCloseDoor() {
+        setDoorCondition(getDoorCondition() == true ? false : true);
+    }
+
+    public void openCloseWindow() {
+        setWindowСondition(getWindowСondition() == true ? false : true);
+    }
+
+    public void show() {
+        String stateOfDoor = (getDoorCondition() == true ? "open" : "close");
+        String stateOfWindow = (getWindowСondition() == true ? "open" : "close");
+        System.out.println("    The door is " + stateOfDoor
+                + ". The window is " + stateOfWindow);
+    }
 }
